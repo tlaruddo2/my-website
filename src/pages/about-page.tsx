@@ -1,5 +1,5 @@
-import { Box } from "@mui/system"
+import { Box } from "@mui/material";
 
-export const AboutPage = () => { 
-    return <Box> About page</Box>
-}
+export const AboutPage = () => {
+  return <Box> About page</Box>;
+};
