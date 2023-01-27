@@ -16,7 +16,7 @@ import {
 
 export const RootRouter = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />}>
+    <Route path="/" element={<Layout />} errorElement={<BodyErrorPage />}>
       <Route path="/" element={<HomePage />} errorElement={<BodyErrorPage />} />
       <Route
         path="/about"
