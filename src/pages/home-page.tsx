@@ -1,4 +1,6 @@
-import {Box} from "@mui/material";
+import { Box, Typography } from "@mui/material";
 export const HomePage = () => {
-    return <Box>Home Page</Box>
-}
+  return <Box>
+    <Typography variant="h3">Hi! Welcome to Kukjin's Website</Typography>
+  </Box>;
+};
