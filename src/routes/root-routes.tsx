@@ -16,30 +16,38 @@ import {
 
 export const RootRouter = createBrowserRouter(
   createRoutesFromElements(
-    <Route path="/" element={<Layout />} errorElement={<BodyErrorPage />}>
-      <Route path="/" element={<HomePage />} errorElement={<BodyErrorPage />} />
+    <Route
+      path="/my-website"
+      element={<Layout />}
+      errorElement={<BodyErrorPage />}
+    >
       <Route
-        path="/about"
+        path="/my-website"
+        element={<HomePage />}
+        errorElement={<BodyErrorPage />}
+      />
+      <Route
+        path="/my-website/about"
         element={<AboutPage />}
         errorElement={<BodyErrorPage />}
       />
       <Route
-        path="/skill"
+        path="/my-website/skill"
         element={<SkillPage />}
         errorElement={<BodyErrorPage />}
       />
       <Route
-        path="/experience"
+        path="/my-website/experience"
         element={<ExperiencePage />}
         errorElement={<BodyErrorPage />}
       />
       <Route
-        path="/project"
+        path="/my-website/project"
         element={<ProjectPage />}
         errorElement={<BodyErrorPage />}
       />
       <Route
-        path="/contact"
+        path="/my-website/contact"
         element={<ContactPage />}
         errorElement={<BodyErrorPage />}
       />
