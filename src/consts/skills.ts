@@ -1,4 +1,4 @@
-import type { Skill } from "./interfaces/skill";
+import type { Skill } from "../entity/skills/interfaces/skill";
 export const SKILLS: Skill[] = [
   {
     name: "Java",
