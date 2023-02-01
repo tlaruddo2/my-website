@@ -24,18 +24,30 @@ const pages = [
 export const Header = () => {
   return (
     <Box>
-      <AppBar position="static" sx={{background: "#cc5eff"}}>
+      <AppBar position="static" sx={{ background: "#430f58" }}>
         <Toolbar>
           {pages.map(p =>
             p === "Kukjin Kim" ? (
-              <Button key={p} >
-                <Link to={"/"} key={p} style={{textDecoration: "none", color:"white"}}>
+              <Button key={p}>
+                <Link
+                  to={"/"}
+                  key={p}
+                  style={{
+                    textDecoration: "none",
+                    color: "white",
+                    fontWeight: "bold",
+                  }}
+                >
                   {p}
                 </Link>
               </Button>
             ) : (
               <Button key={p}>
-                <Link to={`/${p}`} key={p} style={{textDecoration: "none", color:"white"}}>
+                <Link
+                  to={`/${p}`}
+                  key={p}
+                  style={{ textDecoration: "none", color: "white" }}
+                >
                   {p}
                 </Link>
               </Button>

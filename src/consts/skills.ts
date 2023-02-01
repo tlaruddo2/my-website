@@ -2,14 +2,14 @@ import type { Skill } from "../entity/skills/interfaces/skill";
 export const SKILLS: Skill[] = [
   {
     name: "Java",
-    proficiency: 50,
+    proficiency: 40,
     logoUrl:
       "https://upload.wikimedia.org/wikipedia/en/thumb/3/30/Java_programming_language_logo.svg/800px-Java_programming_language_logo.svg.png",
     description: "Used in most prefer of programming language",
   },
   {
     name: "Javascript",
-    proficiency: 50,
+    proficiency: 90,
     logoUrl:
       "https://1000logos.net/wp-content/uploads/2020/09/JavaScript-Logo.png",
     description: "Used in most Web developer project",
