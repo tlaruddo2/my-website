@@ -8,7 +8,7 @@ const pages = [
     "project",
     "contact",
 ];
-export const Menus = () => { 
+export const MenusRegular = () => { 
     return (
         <Box>
             {pages.map(p =>
@@ -24,5 +24,4 @@ export const Menus = () => {
             )}
         </Box>
     )
-
 }

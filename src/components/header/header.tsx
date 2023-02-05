@@ -3,7 +3,7 @@ import {
   Box,
   Toolbar,
 } from "@mui/material";
-import { HeaderMenuMini } from "./header-menu-mini";
+import { HeaderMenuDrawer } from "./header-menu-drawer";
 import { HeaderMenuRegular } from "./header-menu-regular";
 
 export const Header = () => {
@@ -15,7 +15,7 @@ export const Header = () => {
             <HeaderMenuRegular/>  
           </Box>
           <Box sx={{display:{xs:'block',md:'none', width:"100%"}}}>
-            <HeaderMenuMini/> 
+            <HeaderMenuDrawer/> 
           </Box>
         </Toolbar>
       </AppBar>
