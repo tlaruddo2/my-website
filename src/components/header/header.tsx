@@ -1,58 +1,22 @@
 import {
   AppBar,
   Box,
-  Typography,
   Toolbar,
-  Button,
-  Menu,
-  MenuItem,
 } from "@mui/material";
-import { Link } from "react-router-dom";
-import { PAGES } from "consts/pages";
-
-// interface Props {}
-
-const pages = [
-  "Kukjin Kim",
-  "about",
-  "skill",
-  "experience",
-  "project",
-  "contact",
-];
+import { HeaderMenuMini } from "./header-menu-mini";
+import { HeaderMenuRegular } from "./header-menu-regular";
 
 export const Header = () => {
   return (
     <Box>
-      <AppBar position="static" sx={{ background: "#430f58" }}>
+      <AppBar position="static" sx={{ background: "white" }}>
         <Toolbar>
-          {pages.map(p =>
-            p === "Kukjin Kim" ? (
-              <Button key={p}>
-                <Link
-                  to={"/"}
-                  key={p}
-                  style={{
-                    textDecoration: "none",
-                    color: "white",
-                    fontWeight: "bold",
-                  }}
-                >
-                  {p}
-                </Link>
-              </Button>
-            ) : (
-              <Button key={p}>
-                <Link
-                  to={`/${p}`}
-                  key={p}
-                  style={{ textDecoration: "none", color: "white" }}
-                >
-                  {p}
-                </Link>
-              </Button>
-            )
-          )}
+          <Box sx={{display:{xs:'none',md:'block', width:"100%"}}}>
+            <HeaderMenuRegular/>  
+          </Box>
+          <Box sx={{display:{xs:'block',md:'none', width:"100%"}}}>
+            <HeaderMenuMini/> 
+          </Box>
         </Toolbar>
       </AppBar>
     </Box>
