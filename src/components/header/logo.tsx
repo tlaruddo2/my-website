@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 export const Logo = () => { 
     return (
         <Button >
-            <Link to={"/"} 
+            <Link to={"/my-website"} 
                   style={{
                     textDecoration: "none",
                     color: "black",

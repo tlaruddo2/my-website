@@ -14,7 +14,7 @@ export const MenusRegular = () => {
             {pages.map(p =>
                 <Button key={p}>
                     <Link
-                    to={`/${p}`}
+                    to={`/my-website/${p}`}
                     key={p}
                     style={{ textDecoration: "none", color: "black" }}
                     >
