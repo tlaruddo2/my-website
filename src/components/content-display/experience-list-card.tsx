@@ -7,17 +7,11 @@ interface ExperienceListCardProps{
 
 export const ExperienceListCard = ( {experience}: ExperienceListCardProps ) => {
     return (
-      <Box sx={{
-        display:"flex",
-        flexDirection:"column",
-        alignItem: "center",
-        justifyContent:"center"
-      }}>
+      <Box>
         <Box
             sx={{
-            // width: "80%",
             display:"flex",
-            flexDirection: "row",
+            flexDirection: {xs: "column", md:"row"}, 
             justifyContent: "center",
             p: "20"
           }}>
@@ -33,23 +27,29 @@ export const ExperienceListCard = ( {experience}: ExperienceListCardProps ) => {
             />
             <Box sx={{
               display: "flex",
-              flexDirection: "column",
-              alignItems:"start",
-              p:2
+              flexDirection:"row",
             }}>
-              <Typography variant="h6"> {experience.company}</Typography>
-              <Typography variant="subtitle1"> {experience.location}</Typography>
-              <Typography variant="subtitle1"> {experience.role}</Typography>
-              {experience.Description.map(d => <Typography variant="body1"> {d}</Typography>)}
+              <Box sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems:"start",
+                p:2
+              }}>
+                <Typography variant="h6"> {experience.company}</Typography>
+                <Typography variant="subtitle1"> {experience.location}</Typography>
+                <Typography variant="subtitle1"> {experience.role}</Typography>
+                {experience.Description.map(d => <Typography variant="body1"> {d}</Typography>)}
+              </Box>
+              <Box sx={{
+                display: "flex",
+                flexDirection: "column",
+                p:2
+              }}>
+                <Typography> {experience.startDate}</Typography>
+                <Typography>~ {experience.endDate}</Typography>
+              </Box>
             </Box>
-            <Box sx={{
-              display: "flex",
-              flexDirection: "column",
-              p:2
-            }}>
-              <Typography> {experience.startDate}</Typography>
-              <Typography>~ {experience.endDate}</Typography>
-            </Box>
+            
         </Box>
         <Divider variant="middle"/>
       </Box>        
