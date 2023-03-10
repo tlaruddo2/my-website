@@ -1,18 +1,3 @@
-// const http = require('http');
-
-// const hostname = '127.0.0.1';
-// const port = 3000;
-
-// const server = http.createServer((req, res) => {
-//   res.statusCode = 200;
-//   res.setHeader('Content-Type', 'text/plain');
-//   res.end('Hello World');
-// });
-
-// server.listen(port, hostname, () => {
-//   console.log(`Server running at http://${hostname}:${port}/`);
-// });
-
 const express = require("express");
 const app = express();
 const cors = require("cors");
@@ -36,6 +21,20 @@ app.post("/todos", async (req, res) => {
     );
 
     res.json(newTodo);
+  } catch (err) {
+    console.error(err.message);
+  }
+});
+
+app.delete("/todos", async (req, res) => {
+  try {
+    const { id } = req.body;
+    console.log(`id: ${id}`);
+    const removed = await pool.query("DELETE FROM todo WHERE todo_id = ($1)", [
+      id,
+    ]);
+
+    res.json(`number of deleted row ${removed}`);
   } catch (err) {
     console.error(err.message);
   }

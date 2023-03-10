@@ -1,7 +1,7 @@
 // const Pool = require("pg").Pool;
 const { Pool } = require("pg");
 
-export const pool = new Pool({
+const pool = new Pool({
   host: "localhost",
   user: "kukjinkim",
   password: "7789295951r",
@@ -9,4 +9,4 @@ export const pool = new Pool({
   database: "perntodo",
 });
 
-// module.exports = pool;
+module.exports = pool;
