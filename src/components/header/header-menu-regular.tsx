@@ -1,14 +1,16 @@
 import { Box, Button } from "@mui/material";
+import React from "react";
 import { Logo } from "./logo";
 import { MenusRegular } from "./menus/menus-regular";
+import './zzzz.css'
   
 
 
 export const HeaderMenuRegular = () => {
     return (
-        <Box sx={{display:"flex", justifyContent: 'space-between'}}>
+        <div className="container">
             <Logo/>
             <MenusRegular/>
-        </Box>
+        </div>
     )
 }
