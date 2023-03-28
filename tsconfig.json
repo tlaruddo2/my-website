@@ -17,5 +17,5 @@
     "jsx": "react-jsx",
     "baseUrl": "src"
   },
-  "include": ["client/src"]
+  "include": ["src"],
 }
