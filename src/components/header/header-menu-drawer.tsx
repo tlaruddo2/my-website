@@ -7,8 +7,6 @@ import { MenuesDrawer } from "./menus/menus-drawer";
 const pages = [
     "Kukjin Kim",
     "about",
-    "skill",
-    "experience",
     "project",
     "contact",
 ];
