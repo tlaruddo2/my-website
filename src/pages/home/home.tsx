@@ -18,8 +18,8 @@ const Container = styled.div`
 export const Home = () => {
   return (
     <Container>
-      <HomeGreeting/>
       <HomeAnimation/>
+      <HomeGreeting/>
     </Container>
   );
 };
