@@ -6,7 +6,7 @@ export const AnimationContainer = styled.div`
 
     @media screen and (min-width: 750px){
         width: 40vw;
-        height: 500;
+        height: 300;
     }
 
 `
